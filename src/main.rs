@@ -44,24 +44,40 @@ fn main() {
     // }
 
     //LOOP
-    let num1 = 10;
-    let num2 = 20;
+    // let num1 = 10;
+    // let num2 = 20;
 
-    let resultado = num1 + num2;
+    // let resultado = num1 + num2;
 
-    loop {
-        println!("Cual es el resultado de {num1} + {num2}?");
+    // loop {
+    //     println!("Cual es el resultado de {num1} + {num2}?");
 
-        let mut respuesta = String::new();
-        io::stdin().read_line(&mut respuesta).unwrap();
+    //     let mut respuesta = String::new();
+    //     io::stdin().read_line(&mut respuesta).unwrap();
 
-        let respuesta: i32 = respuesta.trim().parse().unwrap();
+    //     let respuesta: i32 = respuesta.trim().parse().unwrap();
 
-        if respuesta == resultado {
-            println!("Correcto");
-            break;
-        } else {
-            println!("Incorrecto, vuelve a intentarlo");
-        }
+    //     if respuesta == resultado {
+    //         println!("Correcto");
+    //         break;
+    //     } else {
+    //         println!("Incorrecto, vuelve a intentarlo");
+    //     }
+    // }
+
+    // ARRAYS AND FOR
+    let mut nombres: Vec<String> = Vec::new();
+
+    for i in 0..3 {
+        println!("Introduce un nombre");
+        let mut nombre = String::new();
+        io::stdin().read_line(&mut nombre).unwrap();
+
+        nombres.push(nombre);
     }
+
+    for nombre in nombres {
+        println!("Hola {nombre}");
+    }
+
 }
